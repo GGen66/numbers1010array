@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
         int[] array = new int[20];
-        int i ,j,l, Max = 0, Min = 0, MaxNum = -11, MinNum = 11;
+        int i, j, l, Max = 0, Min = 0, MaxNum = -11, MinNum = 11;
 
 
         for (l = 0; l < 20; l++) {
@@ -24,18 +24,14 @@ public class Main {
                 MinNum = array[j];
             }
 
+        System.out.println("number Max " + array[Max] + " number Min " + array[Min]);
 
-//System.out.println ();
-       System.out.println("number Max " + array[Max]+ " number Min " + array[Min]);
-        //array[l] = ((int) (Math.random() * 20) - 10);
-        for (l = 0; l < 20; l++) {
-            if (array[l] == MaxNum) {
-                array[l] = array[Min];
+           int temp = array[Min];
+           array[Min] = array[Max];
+           array[Max] = temp;
+
+   for (l = 0; l < 20; l++) {
+
+            System.out.println(array[l]);}
             }
-            System.out.println(array[l]);
-
-        }
-    }
 }
-
-
